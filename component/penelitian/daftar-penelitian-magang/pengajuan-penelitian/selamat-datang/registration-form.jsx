@@ -5,7 +5,7 @@ import React from "react"
 
 import { useState } from "react"
 
-export function RegistrationForm() {
+const ComponentSelamatDatang =()=> {
   const [formData, setFormData] = useState({
     namaLengkap: "Danang Aprinato",
     jenisKelamin: "Laki-laki",
@@ -301,4 +301,6 @@ export function RegistrationForm() {
     </div>
   )
 }
+
+export default ComponentSelamatDatang
 

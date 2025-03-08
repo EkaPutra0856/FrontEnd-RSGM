@@ -1,15 +1,20 @@
 'use client'
 import { ChevronDown } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-const SidebarPenelitian = () => {
-    const [isOpen, setOpen] = useState([false, false, false, false, false, false, false])
+const SidebarPenelitian = (isSidebarOpen) => {
+    const [isOpen, setOpen] = useState([false, false, false, false, false, false, false, false])
     const handleToggleSidebar = (target) => {
         setOpen(isOpen.map((item, index) => index === target ? !item : item));
     };
 
+    useEffect(() => {
+        handleToggleSidebar(7)
+    }, [isSidebarOpen])
+
+
     return (
-        <aside className="w-64 border-r hidden lg:block">
+        <aside className={`w-64 border-r ${isOpen[7] ? "fixed bg-gray-100 min-h-screen" : "hidden"} lg:block lg:static lg:bg-white`}>
             <nav className="p-2">
                 <div className="border-b pb-2">
                     <div onClick={() => handleToggleSidebar(0)} className="flex items-center justify-between p-2 cursor-pointer">
@@ -70,7 +75,7 @@ const SidebarPenelitian = () => {
                     </div>
                 </div>
 
-                
+
             </nav>
         </aside>
     );

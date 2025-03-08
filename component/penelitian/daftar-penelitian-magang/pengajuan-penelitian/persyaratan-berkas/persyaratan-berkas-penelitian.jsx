@@ -1,4 +1,4 @@
-"use client"
+'use client'
 
 // import type React from "react"
 
@@ -10,14 +10,16 @@ import { Upload } from "lucide-react"
 //   preview: string | null
 // }
 
-export function FileUploadForm() {
+
+const ComponentPersyaratanBerkas = ()=> {
   const [files, setFiles] = useState({
-    suratIzin,
-    cvPeneliti,
-    pasFoto,
-    ethicalClearance,
-    proposalPenelitian,
+    suratIzin: { file: null, preview: null },
+    cvPeneliti: { file: null, preview: null },
+    pasFoto: { file: null, preview: null },
+    ethicalClearance: { file: null, preview: null },
+    proposalPenelitian: { file: null, preview: null },
   })
+  
 
   const handleFileChange = (e, fieldName) => {
     const selectedFile = e.target.files?.[0] || null
@@ -254,3 +256,4 @@ export function FileUploadForm() {
   )
 }
 
+export default ComponentPersyaratanBerkas
