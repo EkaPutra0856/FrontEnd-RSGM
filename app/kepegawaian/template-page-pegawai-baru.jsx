@@ -1,8 +1,7 @@
 'use client'
 
 
-
-import SidebarKepegawaian from "@/component/kepegawaian/sidebarKepegawaian"
+import SidebarKepegawaian from "@/component/kepegawaian/sidebarKepegawaian";
 import Header from "@/component/penelitian/header"
 import { useState } from "react";
 
