@@ -1,3 +1,5 @@
+'use client'
+
 import React from "react"
 import { User, Users, Calendar, GraduationCap } from "lucide-react"
 // import { EmployeeTable } from "./employee-table"
