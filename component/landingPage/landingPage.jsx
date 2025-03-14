@@ -6,76 +6,7 @@ const ComponentLandingpage = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-transparent fixed top-0 w-full z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <button className="text-white">
-              {" "}
-              {/* Selalu ada dan bewarna putih */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            </button>
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.svg"
-                alt="RSGM Soelastri Logo"
-                width={40}
-                height={40}
-                className="rounded-full bg-[#0360d9] p-1"
-              />
-              <div>
-                <h1 className="font-bold text-lg md:text-xl text-white">
-                  {" "}
-                  {/* Ubah jadi putih */}
-                  RSGM SOELASTRI
-                </h1>
-                <p className="text-xs md:text-sm text-gray-200">
-                  {" "}
-                  {/* Ubah agar lebih terang */}
-                  Sejahtera - Maju - Islami - Loyal - Empati
-                </p>
-              </div>
-            </Link>
-          </div>
-
-          <div className="hidden md:flex items-center gap-8">
-            <nav className="flex gap-6">
-              <Link
-                href="/penelitian"
-                className="font-medium text-white hover:text-[#0360d9]" // Ubah jadi putih
-              >
-                Penelitian
-              </Link>
-              <Link
-                href="/magang"
-                className="font-medium text-white hover:text-[#0360d9]" // Ubah jadi putih
-              >
-                Magang
-              </Link>
-            </nav>
-            <Link
-              href="/login"
-              className="bg-white text-black px-6 py-2 rounded-full font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
-            >
-              Login
-            </Link>
-          </div>
-        </div>
-      </header>
+      
 
       {/* Hero Section */}
       <section className="relative h-[500px] md:h-[800px] w-full">

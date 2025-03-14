@@ -1,9 +1,9 @@
-
 'use client'
 import Image from "next/image";
 import Link from "next/link";
 
-const PageLandingpage = () => {
+const ComponentLandingpage = () => {
+  
   return (
     <div className="min-h-screen flex flex-col">
       {/* Header */}
@@ -52,28 +52,29 @@ const PageLandingpage = () => {
             </Link>
           </div>
 
-          <div className="hidden md:flex items-center gap-8">
-            <nav className="flex gap-6">
-              <Link
-                href="/penelitian"
-                className="font-medium text-white hover:text-[#0360d9]" // Ubah jadi putih
-              >
-                Penelitian
-              </Link>
-              <Link
-                href="/magang"
-                className="font-medium text-white hover:text-[#0360d9]" // Ubah jadi putih
-              >
-                Magang
-              </Link>
-            </nav>
-            <Link
-              href="/login"
-              className="bg-white text-black px-6 py-2 rounded-full font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
-            >
-              Login
-            </Link>
-          </div>
+          <div className="md:flex items-center gap-8">
+  <nav className="flex gap-6">
+    <Link
+      href="/penelitian"
+      className="hidden md:block font-medium text-white hover:text-[#0360d9]" // Hanya hidden di mobile
+    >
+      Penelitian
+    </Link>
+    <Link
+      href="/magang"
+      className="hidden md:block font-medium text-white hover:text-[#0360d9]" // Hanya hidden di mobile
+    >
+      Magang
+    </Link>
+  </nav>
+  <Link
+    href="/login"
+    className="bg-white text-black px-6 py-2 rounded-full font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
+  >
+    Login
+  </Link>
+</div>
+
         </div>
       </header>
 
@@ -205,43 +206,46 @@ const PageLandingpage = () => {
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-8">Keuntungan Bergabung di RSGM</h2>
+             {/* Benefits Section */}
+      <section className="py-16">
+        <div className="container mx-auto px-4">
+          <h2 className="text-5xl font-bold mb-10">Keuntungan Bergabung di RSGM</h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="flex flex-col md:flex-row gap-4">
-                <div className="flex-1 space-y-6">
-                  <div className="bg-white p-6 rounded-lg shadow-sm border">
-                    <h3 className="font-bold text-lg mb-2">Akses Fasilitas Medis Modern</h3>
-                    <p className="text-gray-600">
-                      Gunakan peralatan terlengkap di lingkungan rumah sakit dengan teknologi terkini.
-                    </p>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="flex flex-col md:flex-row gap-4">
+              <div className="flex-1 space-y-10">
+                <div className="bg-white p-12 rounded-lg shadow-sm border">
+                  <h3 className="font-bold text-3xl mb-6">Akses Fasilitas Medis Modern</h3>
+                  <p className="text-gray-600 text-xl">
+                    Gunakan peralatan terlengkap di lingkungan rumah sakit dengan teknologi terkini.
+                  </p>
+                </div>
 
-                  <div className="bg-white p-6 rounded-lg shadow-sm border">
-                    <h3 className="font-bold text-lg mb-2">Bimbingan dari Profesional</h3>
-                    <p className="text-gray-600">Dibimbing oleh tenaga ahli dan praktisi berpengalaman di bidangnya.</p>
-                  </div>
+                <div className="bg-white p-12 rounded-lg shadow-sm border">
+                  <h3 className="font-bold text-3xl mb-6">Bimbingan dari Profesional</h3>
+                  <p className="text-gray-600 text-xl">Dibimbing oleh tenaga ahli dan praktisi berpengalaman di bidangnya.</p>
+                </div>
 
-                  <div className="bg-white p-6 rounded-lg shadow-sm border">
-                    <h3 className="font-bold text-lg mb-2">Peluang Berkontribusi</h3>
-                    <p className="text-gray-600">
-                      Berperan dalam penelitian dan praktik yang berdampak nyata pada dunia.
-                    </p>
-                  </div>
+                <div className="bg-white p-12 rounded-lg shadow-sm border">
+                  <h3 className="font-bold text-3xl mb-6">Peluang Berkontribusi</h3>
+                  <p className="text-gray-600 text-xl">
+                    Berperan dalam penelitian dan praktik yang berdampak nyata pada dunia.
+                  </p>
                 </div>
               </div>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 gap-4">
+              <div>
                 <Image
-                  src="/placeholder.svg?height=250&width=250"
+                  src="/images/keuntungan.png?height=250&width=250"
                   alt="Dental Professionals"
                   width={250}
                   height={250}
                   className="rounded-lg object-cover w-full h-full"
                 />
+              </div>
+              <div className="grid grid-cols-3 gap-4">
                 <Image
                   src="/placeholder.svg?height=250&width=250"
                   alt="Dental Professionals"
@@ -266,23 +270,29 @@ const PageLandingpage = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
+
 
         {/* CTA Section */}
-        <section className="py-16 bg-blue-700 text-white">
-          <div className="container mx-auto px-4 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Siap menjadi bagian dari inovasi dan pengembangan keilmuan di RSGM? Jelajahi lebih lanjut dan daftar
-              sekarang!
-            </h2>
-            <Link
-              href="/daftar"
-              className="inline-flex items-center bg-white text-blue-700 px-6 py-3 rounded-md hover:bg-gray-100 transition-colors font-medium"
-            >
-              Daftar Sekarang
-            </Link>
-          </div>
-        </section>
+<section
+  className="py-24 bg-cover bg-center text-white"
+  style={{ backgroundImage: "url('/images/siapmenjadi.png')" }}
+>
+  <div className="container mx-auto px-4 text-left">
+    <h2 className="text-4xl md:text-6xl font-extrabold leading-tight mb-8 drop-shadow-lg">
+      Siap menjadi bagian dari inovasi dan pengembangan keilmuan di RSGM? 
+      <br className="hidden md:block" /> Jelajahi lebih lanjut dan daftar sekarang!
+    </h2>
+    <Link
+      href="/daftar"
+      className="inline-block bg-white text-blue-700 text-lg md:text-2xl font-semibold px-10 py-4 rounded-lg hover:bg-gray-100 transition-transform transform hover:scale-105 shadow-md"
+    >
+      Daftar Sekarang
+    </Link>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="bg-[#0360d9] text-white p-6 mt-auto">
@@ -376,4 +386,4 @@ const PageLandingpage = () => {
   );
 };
 
-export default PageLandingpage;
+export default ComponentLandingpage;
