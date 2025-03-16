@@ -6,110 +6,110 @@ const ComponentLandingpage = () => {
   
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Header */}
-      <header className="bg-transparent fixed top-0 w-full z-50">
-        <div className="container mx-auto px-4 py-3 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <button className="text-white">
-              {" "}
-              {/* Selalu ada dan bewarna putih */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-              </svg>
-            </button>
-            <Link href="/" className="flex items-center gap-2">
-              <Image
-                src="/logo.svg"
-                alt="RSGM Soelastri Logo"
-                width={40}
-                height={40}
-                className="rounded-full bg-[#0360d9] p-1"
-              />
-              <div>
-                <h1 className="font-bold text-lg md:text-xl text-white">
-                  {" "}
-                  {/* Ubah jadi putih */}
-                  RSGM SOELASTRI
-                </h1>
-                <p className="text-xs md:text-sm text-gray-200">
-                  {" "}
-                  {/* Ubah agar lebih terang */}
-                  Sejahtera - Maju - Islami - Loyal - Empati
-                </p>
-              </div>
-            </Link>
-          </div>
+{/* Header */}
+<header className="bg-transparent fixed top-0 w-full z-50">
+  <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+    {/* Logo & Menu Button */}
+    <div className="flex items-center gap-4">
+      {/* Menu Button */}
+      <button className="text-white md:hidden">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="28"
+          height="28"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
 
-          <div className="md:flex items-center gap-8">
-  <nav className="flex gap-6">
-    <Link
-      href="/penelitian"
-      className="hidden md:block font-medium text-white hover:text-[#0360d9]" // Hanya hidden di mobile
-    >
-      Penelitian
-    </Link>
-    <Link
-      href="/magang"
-      className="hidden md:block font-medium text-white hover:text-[#0360d9]" // Hanya hidden di mobile
-    >
-      Magang
-    </Link>
-  </nav>
-  <Link
-    href="/login"
-    className="bg-white text-black px-6 py-2 rounded-full font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
-  >
-    Login
-  </Link>
-</div>
-
+      {/* Logo */}
+      <Link href="/" className="flex items-center gap-3">
+        <Image
+          src="/logo.svg"
+          alt="RSGM Soelastri Logo"
+          width={50}
+          height={50}
+          className="rounded-full bg-[#0360d9] p-1"
+        />
+        <div>
+          <h1 className="font-bold text-xl text-white">
+            RSGM SOELASTRI
+          </h1>
+          <p className="text-sm text-gray-300">
+            Sejahtera - Maju - Islami - Loyal - Empati
+          </p>
         </div>
-      </header>
+      </Link>
+    </div>
 
-      {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[800px] w-full">
-        <div className="relative h-full w-full border border-red-500">
-          <Image
-            src="/images/landing1.png"
-            alt="Dental professional working"
-            fill
-            className="object-cover opacity-60 z-5" // Tambahin z-0 biar di layer paling bawah
-            priority
-          />
-        </div>
+    {/* Navigation */}
+    <div className="hidden md:flex items-center gap-10">
+      <nav className="flex gap-8">
+        <Link
+          href="/penelitian"
+          className="font-medium text-white text-lg hover:text-[#0360d9] transition-colors"
+        >
+          Penelitian
+        </Link>
+        <Link
+          href="/magang"
+          className="font-medium text-white text-lg hover:text-[#0360d9] transition-colors"
+        >
+          Magang
+        </Link>
+      </nav>
+      <Link
+        href="/login"
+        className="bg-white text-black px-8 py-3 rounded-full font-medium border border-gray-200 hover:bg-gray-100 transition-colors"
+      >
+        Login
+      </Link>
+    </div>
+  </div>
+</header>
 
-        <div className="absolute inset-0 bg-black bg-opacity-0">
-          <div className="container mx-auto px-4 h-full flex flex-col justify-center">
-            <div className="max-w-2xl text-white z-6">
-              <h1 className="text-3xl md:text-5xl font-bold mb-4 ">
-                Advancing Dental Excellence Through Innovation and Research
-              </h1>
-              <p className="text-lg md:text-xl mb-8 ">
-                Membentuk masa depan kesehatan gigi melalui penelitian inovatif
-                dan pengalaman praktis yang bermakna
-              </p>
-              <Link
-                href="/about"
-                className="inline-block bg-[#0360d9] text-white px-6 py-3 rounded font-medium hover:bg-blue-700 transition-colors"
-              >
-                Jelajahi lebih lanjut
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+{/* Hero Section */}
+<section className="relative h-[700px] md:h-[1400px] w-full">
+  <div className="relative h-full w-full border border-red-500">
+    <Image
+      src="/images/landing1.png"
+      alt="Dental professional working"
+      fill
+      className="object-cover opacity-60 z-5"
+      priority
+    />
+  </div>
+
+  <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center">
+    <div className="container mx-auto px-6 h-full flex flex-col justify-center">
+      <div className="max-w-4xl text-white text-center md:text-left z-10">
+        <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-tight">
+          Advancing Dental Excellence Through Innovation and Research
+        </h1>
+        <p className="text-2xl md:text-3xl mb-12 leading-relaxed">
+          Membentuk masa depan kesehatan gigi melalui penelitian inovatif
+          dan pengalaman praktis yang bermakna
+        </p>
+        <Link
+          href="/about"
+          className="inline-block bg-[#0360d9] text-white text-lg md:text-2xl px-10 py-4 rounded-full font-semibold hover:bg-blue-700 transition-colors"
+        >
+          Jelajahi lebih lanjut
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
            {/* About Section */}
       <section className="py-16 bg-white">
